@@ -30,9 +30,6 @@ const nft = () => {
 
 
 
-
-
-
 function NftCard({account, item, index,loding,setloding }) {
     const [Auction, setAuction] = useState(false)
     const [price, setPrice] = useState(null);
@@ -40,12 +37,6 @@ function NftCard({account, item, index,loding,setloding }) {
     const [modalShow, setModalShow] = useState(false);
     const [BidModalShow, setBidModalShow] = useState(false);
     const [FixModalShow, setFixModalShow] = useState(false);
-
-
-
-
-
-
 
 
     const sell = async () => {
@@ -74,7 +65,7 @@ function NftCard({account, item, index,loding,setloding }) {
             await (await nft().setApprovalForAll(item.marketplace,true)).wait()
             const listingPrice = ethers.utils.parseEther(price)
             const nftId = item.itemId.toString();
-            const auctionTime = time*60*60*24;
+            const auctionTime = time*60*60*60*24;
             await (await SetTransactionSigner().createAuction(item.nft, nftId, listingPrice, auctionTime)).wait()
             setPrice("")
             setTime("")
@@ -178,13 +169,13 @@ console.log("!!!!",item)
                 </p>
                 <input type="text" className="form-control"
                     onChange={(e) => setPrice(e.target.value)}
-                    placeholder="00.00 ETH" />
+                    placeholder="00.00 MATIC" />
 
     <p className="text-center">set Time<span className="price color-popup"></span>
                 </p>
                 <input type="text" className="form-control"
                     onChange={(e) => setTime(e.target.value)}
-                    placeholder="30 Days" />
+                    placeholder="Put Time" />
 
                 <Button onClick={createAuction} className="btn btn-primary" data-toggle="modal" data-target="#popup_bid_success" data-dismiss="modal" aria-label="Close"> List My NFT </Button>
             </div>

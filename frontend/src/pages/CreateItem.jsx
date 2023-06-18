@@ -109,13 +109,6 @@ const CreateItem = ({account, changeNetwork, loding ,setloding}) => {
 // console.log("thIS IS image",image)
 
 
-
-
-
-
-
-
-
 useEffect(()=>{
 
 },[])
@@ -159,7 +152,7 @@ useEffect(()=>{
                   <h4 className="title-create-item">Upload file</h4>
                   <label className="uploadFile">
                     <span className="filename">
-                      PNG, JPG, GIF, WEBP or MP4. Max 200mb.
+                      PNG, JPG, JPEG.
                     </span>
                     <input
                       type="file"
