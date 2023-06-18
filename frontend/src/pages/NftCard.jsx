@@ -93,7 +93,7 @@ console.log("!!!!",item)
                     <div className="button-place-bid ">
                         <button onClick={() => setModalShow(true)} className="sc-button style-place-bid style bag fl-button pri-3"><span>NFT Listing</span></button>
                     </div>
-                    <Link className="wishlist-button heart"><span className="number-like"> NO </span></Link>
+                    
                 </div>
                 <div className="card-title mg-bt-16">
                     <h5><Link >"{item.name}"</Link></h5>

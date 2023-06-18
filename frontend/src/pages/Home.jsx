@@ -100,11 +100,7 @@ const Home01 = ({account,changeNetwork, loding ,setloding}) => {
         <div className='home-1'>
         <Header account={account} changeNetwork={changeNetwork}/>
         <Slider data={heroSliderData} />
-        {/* <LiveAuction data={Items} /> */}
         <Expolore loding={loding} setloding={setloding} />
-        {/* <TopSeller data={topSellerData} /> */}
-        {/* <PopularCollection data={popularCollectionData} /> */}
-        {/* <Create /> */}
         <Footer />
     </div>
       

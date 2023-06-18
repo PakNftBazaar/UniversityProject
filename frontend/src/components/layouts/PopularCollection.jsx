@@ -83,9 +83,8 @@ const PopularCollectionItem = (props) => (
                   </div>
                 </div>
               </div>
-              <Link to="/login" className="wishlist-button public heart">
-                <span className="number-like"> 100</span>
-              </Link>
+              
+              
             </div>
             <Link to="/authors">
               <div className="media-images-collection">
